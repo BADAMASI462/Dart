@@ -9,6 +9,7 @@ void main() {
   stdout.writeln('Enter Words To Find Vowels and Consonant: ');
   var x = stdin.readLineSync().toString();
   x = x.toLowerCase();
+  x = x.replaceAll(' ', '');
   for (var xi = 0; xi < x.length; xi++) {
     if (vowel.contains(x[xi])) {
       if (checkv.contains(x[xi]) == false) {
@@ -25,12 +26,12 @@ void main() {
   if (countv == 1)
     print('The Vowel From This Input Is: [ $checkv]');
   else if (countv == 0)
-    print('No Vowels Found');
+    print('No Vowel Found');
   else if (countv > 1) print('The Vowels From The Input Are: [ $checkv]');
 
   if (countc == 1)
     print('The Consonant From This Input Is: [ $checkc]');
   else if (countc == 0)
     print('No Consonant Found');
-  else if (countc > 1) print('The Consonant From The Input Are: [ $checkc]');
+  else if (countc > 1) print('The Consonants From The Input Are: [ $checkc]');
 }
