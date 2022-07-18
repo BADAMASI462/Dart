@@ -18,10 +18,12 @@ void main() {
         }
       }
     }
-    if (check < 1) {
+    if (check < 2) {
       print('No Chunk Found');
-    } else
+    } else {
+      check = check - 1;
       print('The Chunk From The Given Input Is: $check');
+    }
   } catch (e) {
     print(e);
   }
