@@ -15,15 +15,15 @@ void main() {
         x2.contains(RegExp('[A-Za-z]')) ||
         y2.contains(RegExp('[A-Za-z]')))
       throw ('O N L Y  N U M B E R S  I S  R E Q U I R E D !');
-    int Y1 = int.parse(y1);
-    int X1 = int.parse(x1);
-    int X2 = int.parse(x2);
-    int Y2 = int.parse(y2);
-    if ((X1 != null && X2 != null && Y1 != null && Y2 != null)) {}
-
+    var Y1 = num.parse(y1);
+    var X1 = num.parse(x1);
+    var X2 = num.parse(x2);
+    var Y2 = num.parse(y2);
     var M1 = (X1 + X2) / 2;
     var M2 = (Y1 + Y2) / 2;
-    print('$M1,$M2');
+    var AM1 = M1.toStringAsPrecision(2);
+    var AM2 = M2.toStringAsPrecision(2);
+    print('$AM1 , $AM2');
   } catch (e) {
     print(e);
   }
